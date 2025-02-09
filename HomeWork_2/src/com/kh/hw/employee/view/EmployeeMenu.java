@@ -25,18 +25,15 @@ public class EmployeeMenu {
 
 			if (menuNum == 1) {
 				insertEmp();
-				break;
 			} else if (menuNum == 2) {
 				updateEmp();
-				break;
 			} else if (menuNum == 3) {
 				deleteEmp();
-				break;
 			} else if (menuNum == 4) {
 				printEmp();
 			} else if (menuNum == 9) {
 				System.out.println("프로그램을 종료합니다");
-				break;
+				return;
 			} else {
 				System.out.println("번호를 잘못 입력하셨습니다.");
 			}
@@ -65,9 +62,9 @@ public class EmployeeMenu {
 			System.out.print("보너스 율 : ");
 			double bonus = sc.nextDouble();
 			ec.add(empNo, name, gender, phone, dept, salary, bonus);
-		} else if(select == 'n' || select == 'N'){
+		} else{
 			ec.add(empNo, name, gender, phone);
-//			new EmployeeMenu();		//TODO : 값을 저장하면서 메인메뉴(EmployeeMenu)를 다시 불러오는 법...?
+			return;
 		}
 	}
 
@@ -79,7 +76,7 @@ public class EmployeeMenu {
 		System.out.println("2. 사원 연봉");
 		System.out.println("3. 보너스 율");
 		System.out.println("9. 돌아가기");
-		System.out.println("메뉴 번호를 누르세요 : ");
+		System.out.print("메뉴 번호를 누르세요 : ");
 		int select = sc.nextInt();
 
 		if (select == 1) {
@@ -96,22 +93,21 @@ public class EmployeeMenu {
 			ec.modify(bonus);
 		} else if (select == 9) {
 			System.out.println("메인 메뉴로 돌아갑니다.");
-//			EmployeeMenu();
+			new EmployeeMenu();
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
-//			EmployeeMenu();
-			new EmployeeMenu();
+			return;
 		}
 	}
 
 	public void deleteEmp() {
 
-		System.out.println("정말 삭제하시겠습니까? (y/n) : ");
+		System.out.print("정말 삭제하시겠습니까? (y/n) : ");
 		char select = sc.next().charAt(0);
 
 		if (select == 'y' || select == 'Y') {
 			ec.remove();
-			System.out.println("삭제하였습니다."); // TODO
+			System.out.println("데이터 삭제에 성공하였습니다."); // TODO
 		}
 	}
 

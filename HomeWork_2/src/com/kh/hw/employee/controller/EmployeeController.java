@@ -5,7 +5,7 @@ import com.kh.hw.employee.model.vo.Employee;
 public class EmployeeController {
 
 	//필드
-	Employee e = new Employee();
+	private Employee e = new Employee();
 	
 	//메소드
 	public void add(int empNo, String name, char gender, String phone) {

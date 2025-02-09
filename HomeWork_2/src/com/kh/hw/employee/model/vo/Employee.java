@@ -22,10 +22,7 @@ public class Employee {
 	}
 
 	public Employee(int empNo, String name, char gender, String phone, String dept, int salary, double bonus) {
-		this.empNo = empNo;
-		this.name = name;
-		this.gender = gender;
-		this.phone = phone;
+		this(empNo, name, gender, phone);
 		this.dept = dept;
 		this.salary = salary;
 		this.bonus = bonus;
@@ -33,7 +30,7 @@ public class Employee {
 	
 	//메소드
 	public String printEmployee() {
-		String info = String.format("%s %c %s %s %d %f", name, gender, phone, dept, salary, bonus);
+		String info = String.format("%s %c %s %s %d %.1f", name, gender, phone, dept, salary, bonus);
 		return info;
 	}
 
