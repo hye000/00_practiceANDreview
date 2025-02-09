@@ -30,7 +30,7 @@ public class Employee {
 	
 	//메소드
 	public String printEmployee() {
-		String info = String.format("%s %c %s %s %d %.1f", name, gender, phone, dept, salary, bonus);
+		String info = String.format("%s %c %s %s %d %.2f", name, gender, phone, dept, salary, bonus);
 		return info;
 	}
 
