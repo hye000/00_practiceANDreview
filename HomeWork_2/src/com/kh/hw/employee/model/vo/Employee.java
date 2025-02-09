@@ -34,7 +34,7 @@ public class Employee {
 	//메소드
 	public String printEmployee() {
 		String info = String.format("%s %c %s %s %d %f", name, gender, phone, dept, salary, bonus);
-		return info; //TODO return 값 설정
+		return info;
 	}
 
 	//getter,setter
