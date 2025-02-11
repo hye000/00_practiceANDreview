@@ -52,6 +52,11 @@ public class PersonMenu {
 			System.out.print("메뉴 번호 : ");
 			int select = sc.nextInt();
 
+			if(pc.personCount()[0] == 3 && select == 1) {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해 주세요");
+				break;
+			}
+			
 			switch (select) {
 			case 1:
 				// TODO : 실제로 1번을 누르면 “잘못 입력하셨습니다. 다시 입력해주세요.”를 출력
@@ -83,6 +88,11 @@ public class PersonMenu {
 			int select = sc.nextInt();
 
 			// 입력 받기 전에 조건식 설정
+			if(pc.personCount()[1] == 10 && select == 1) {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해 주세요");
+				break;
+			}
+			
 			switch (select) {
 			case 1:
 				// TODO : 실제로 1번을 누르면 “잘못 입력하셨습니다. 다시 입력해주세요.”를 출력
