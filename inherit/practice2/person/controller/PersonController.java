@@ -17,7 +17,10 @@ public class PersonController {
 			if (s[i] != null) {
 				stdCount++;
 				count[0] = stdCount;
-			} else if (e[i] != null) {
+			}
+		}
+		for(int i=0; i<e.length; i++) {
+			if(e[i] != null) {
 				empCount++;
 				count[1] = empCount;
 			}
